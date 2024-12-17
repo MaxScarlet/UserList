@@ -1,0 +1,24 @@
+<div class="home-container">
+    <section class="overview">
+        <p>{{ overview }}</p>
+    </section>
+
+    <section class="features">
+        <h2>Features</h2>
+        <ul>
+            <li *ngFor="let feature of features">{{ feature }}</li>
+        </ul>
+    </section>
+
+    <section class="mock-api">
+        <h2>Mock API</h2>
+
+        <div class="mock-api-item" *ngFor="let api of [mockApiDetails.inMemoryWebApi, mockApiDetails.simpleExpress]">
+            <h3>{{ api.title }}</h3>
+            <p>{{ api.description }}</p>
+            <ul>
+                <li *ngFor="let note of api.notes">{{ note }}</li>
+            </ul>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,14 @@
+<div class="header">
+    <h1>Peoples </h1>
+    <button routerLink="/users/new">Add new</button>
+</div>
+<ul>
+    <li *ngFor="let item of list">
+        <span>{{item.Name}}</span>
+        <div>
+            <button routerLink="/users/edit/{{item.id}}">Edit</button>
+            <button routerLink="/users/{{item.id}}">Details</button>
+            <button (click)="deleteItem(item.id)">Delete</button>
+        </div>
+    </li>
+</ul>

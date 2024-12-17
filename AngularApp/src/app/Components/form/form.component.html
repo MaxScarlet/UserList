@@ -1,0 +1,35 @@
+<div>
+    <h1 *ngIf="formData.Name">Form: {{ formData.Name }}</h1>
+
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+
+        <div class="formElem">
+            <label for="Name">Name: </label>
+            <input type="text" id="Name" name="Name" [(ngModel)]="formData.Name" #name="ngModel" required />
+            <div class="validator" *ngIf="name.invalid && (name.dirty || name.touched)">
+                <small *ngIf="name.errors?.['required']">Name is required.</small>
+            </div>
+        </div>
+
+        <div class="formElem">
+            <label for="Email">Email: </label>
+            <input type="text" id="Email" name="Email" [(ngModel)]="formData.Email" #email="ngModel" required email />
+            <div class="validator" *ngIf="email.invalid && (email.dirty || email.touched)">
+                <small *ngIf="email.errors?.['required']">Email is required.</small>
+                <small *ngIf="email.errors?.['email']">Please enter a valid email address.</small>
+            </div>
+        </div>
+
+        <div class="formElem">
+            <label for="Password">Password: </label>
+            <input type="password" id="Password" name="Password" [(ngModel)]="formData.Password" #password="ngModel"
+                required minlength="6" />
+            <div class="validator" *ngIf="password.invalid && (password.dirty || password.touched)">
+                <small *ngIf="password.errors?.['required']">Password is required.</small>
+                <small *ngIf="password.errors?.['minlength']">Password must be at least 6 characters long.</small>
+            </div>
+        </div>
+
+        <button type="submit" [disabled]="form.invalid">Submit</button>
+    </form>
+</div>

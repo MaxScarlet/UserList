@@ -1,0 +1,14 @@
+<div>
+    <h1 *ngIf="viewData.Name">{{ viewData.Name }}</h1>
+
+    <div class="formElem">
+        <label for="Email">Email: </label>
+        <span>{{ viewData.Email || 'Not provided' }}</span>
+    </div>
+
+    <div class="formElem">
+        <label for="Password">Password: </label>
+        <span>{{ viewData.Password || 'Not provided' }}</span>
+    </div>
+
+</div>

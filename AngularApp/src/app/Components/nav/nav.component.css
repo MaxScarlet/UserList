@@ -1,0 +1,23 @@
+.menu {
+  /* width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  */
+  background-color: var(--menu-bg-color);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: calc(100% - 20px);
+}
+
+.menuItem {
+  display: block;
+  cursor: pointer;
+  font-size: large;
+  color: var(--menu-color);
+  font-weight: bold;
+  padding: 10px 10px 0px 10px;
+  white-space: nowrap;
+}

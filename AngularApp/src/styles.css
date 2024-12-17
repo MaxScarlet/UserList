@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #881719;
+    --accent-color: #f08080;
+    --background-color: #ededed;
+    --bg-color-light: #d8bfbf;
+    --text-color: #333333;
+    --border-color: #bfbfbf;
+
+    --btn-color: #5f0f11;
+    --btn-color-hover: #881719;
+    --btn-color-disable: #595959;
+
+    --menu-bg-color: #c7c7c7;
+    --menu-color: #2c2d2d;
+    --menu-color-active: #881719;
+
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Arial', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+main {
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 65%;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--menu-bg-color);
+    color: var(--menu-color);
+    display: grid;
+    align-items: start;
+
+    grid-template-columns: 1fr 150px;
+    justify-content: left;
+}
+
+button {
+    width: 100px;
+    height: 25px;
+    margin-left: 10px;
+    margin-bottom: 2px;
+    background-color: var(--btn-color);
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--btn-color-hover);
+}
+
+button:disabled {
+    background-color: var(--btn-color-disable);
+    cursor: not-allowed;
+}
+
+.formElem {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    width: 300px;
+}
+
+.formElem label {
+    font-weight: bold;
+    padding: 3px;
+    white-space: nowrap;
+    min-width: 80px;
+}
+
+.formElem input {
+    width: 100%;
+}
+
+.formElem select {
+    width: max-content;
+}
+
+.formElem input[type="checkbox"] {
+    width: 20px;
+}
+
+.validator {
+    margin-left: 5px;
+    white-space: nowrap;
+    color: var(--btn-color-hover);
+    font-style: italic;
+}
