@@ -32,7 +32,7 @@ import { InMemoryDataService } from './Services/in-memory-data.service';
         FormsModule,
         ReactiveFormsModule,
         // InMem: Comment if using external mock API endpoint (see source code "/Server" folder)
-        InMemoryWebApiModule.forRoot(InMemoryDataService)
+        // InMemoryWebApiModule.forRoot(InMemoryDataService)
     ],
     providers: [
         UserService,

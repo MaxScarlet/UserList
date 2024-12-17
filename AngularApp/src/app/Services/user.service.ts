@@ -9,10 +9,10 @@ import { User } from '../Models/User';
 export class UserService {
     constructor(private http: HttpClient) { }
     // ExpressJS:
-    // mainUrl = "http://localhost:3000/users"
+    mainUrl = "http://localhost:3000/users"
 
     // InMem:
-    mainUrl = "api/person";
+    // mainUrl = "api/person";
 
     get<T>(): Observable<T[]> {
         const fullUrl: string = `${this.mainUrl}`;
